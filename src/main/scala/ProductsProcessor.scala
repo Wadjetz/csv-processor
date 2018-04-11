@@ -2,7 +2,7 @@ import java.io.PrintWriter
 import akka.stream.scaladsl.Sink
 import scala.concurrent.Future
 
-object ProductProcessor {
+object ProductsProcessor {
 
   val aggregatePrefix = "aggregate"
 
@@ -61,7 +61,7 @@ object ProductProcessor {
         Future.successful {
           val key = new String(entry.getKey, "UTF-8")
           val value = new String(entry.getValue, "UTF-8")
-          ProductProcessor.writeKeys(key, value, aggregatePrinter, userPrinter, productPrinter)
+          ProductsProcessor.writeKeys(key, value, aggregatePrinter, userPrinter, productPrinter)
         }
       }
   }
