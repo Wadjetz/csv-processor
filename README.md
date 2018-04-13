@@ -1,4 +1,21 @@
-On dispose d'un fichier CSV, selon le modèle suivant: 
+# Csv Processor
+
+##
+```sh
+sbt run -i input.csv
+```
+
+## Usage: csv_processor [options]
+
+    -i, --input <file>       input is a required file property
+    -a, --aggratings <file>  aggratings is a file property
+    -u, --lookupuser <file>  lookupuser is a file property
+    -p, --lookupProduct <file>
+                             lookupProduct is a file property
+
+## Exercise
+
+On dispose d'un fichier CSV, selon le modèle suivant:
 input.csv : userId,itemId,rating,timestamp
 
 On souhaite construire 3 CSV de la façon suivante: 
